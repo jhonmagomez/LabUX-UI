@@ -1,0 +1,131 @@
+/* INDICE DE ESTILOS
+0. Generales / colores
+1. Tipografías
+2. Header / Cabecera
+3. Enlaces / Botones
+4. Areas destacadas
+*/
+
+/* 0. Generales / colores */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  --color-principal: #0088e3;
+  --color-acento: #acef00;
+  --color-tercer: #7700d2;
+  --color-texto: #1a1f2a;
+}
+
+.elements-row{
+    display: flex;
+}
+
+/* 1. Tipografías */
+.titulo-principal{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 28px;
+}
+
+.titulo-secundario{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 22px;
+}
+.parrafo{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 14px;
+    color: var(--color-texto);
+}
+.texto-oculto{
+    display: none;
+}
+
+/* 2. Header / Cabecera */
+#cabecera-principal{
+    padding: 20px 2% 20px 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* borde: grosor tipo color; */
+    border-bottom: 3px solid var(--color-principal);
+}
+
+
+/* 3. Enlaces / Botones */
+.boton-principal{
+    /* fuente */
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 20px;
+    /* quito la linea inferior */
+    text-decoration: none;
+    /* Asigno cuerpo por medio del relleno */
+    padding: 8px 15px 8px 15px;
+    /* animo el paso del mouse */
+    transition: all linear 0.3s;
+    /* redondeo los bordes */
+    border-radius: 3px;
+}
+
+.boton-principal:hover{
+    color: rgb(255,255,255);
+    background-color: var(--color-principal);
+}
+
+/* 4. Areas destacadas */
+#area-destacadas{
+
+}
+
+
+
+
+
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    /* 2. Header / Cabecera */
+    #cabecera-principal{
+        flex-direction: column;
+        padding: 20px 0 20px 0;
+    }
+    /* 3. Enlaces / Botones */
+    nav[role=navigation]{
+        width: 100%;
+    }
+    .boton-principal{
+        /* Se comporte como un bloque */
+        display: block;
+        /* ancho */
+        width: 96%;
+        /* margen */
+        margin: 5px 2% 0 2%;
+        /* alineo al centro */
+        text-align: center;
+        /* borde inferior */
+        border-bottom: 1px solid var(--color-principal);
+        /* quito borde */
+        border-radius: 0;
+    }
+}
+
+
+
