@@ -4,6 +4,7 @@
 2. Header / Cabecera
 3. Enlaces / Botones
 4. Areas destacadas
+5. Area Experiencia (Video)
 */
 
 /* 0. Generales / colores */
@@ -19,8 +20,13 @@
   --color-texto: #1a1f2a;
 }
 
+img{
+    width:100%;
+}
+
 .elements-row{
     display: flex;
+    justify-content: space-around;
 }
 
 /* 1. Tipografías */
@@ -31,6 +37,7 @@
     font-style: normal;
     color: var(--color-principal);
     font-size: 28px;
+    text-align: center;
 }
 
 .titulo-secundario{
@@ -92,16 +99,65 @@
 
 /* 4. Areas destacadas */
 #area-destacadas{
-
+    /* relleno: top right bottom left */
+    padding: 100px 0;
+}
+.articulo-index{
+    /* relleno: top right bottom left */
+    padding: 20px;
+}
+.articulo-index *{
+    /* margin: top right bottom left */
+    margin: 0 0 10px 0;
+}
+.boton-ver-mas{
+    /* fuente */
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: var(--color-principal);
+    padding: 6px 15px 6px 15px;
+    font-size: 16px;
+    /* quito la linea inferior */
+    text-decoration: none;
+    /* Asigno cuerpo por medio del relleno */
+    padding: 6px 10px 6px 10px;
+    /* animo el paso del mouse */
+    transition: all linear 0.3s;
+    /* redondeo los bordes */
+    border-radius: 3px;
 }
 
+.boton-ver-mas:hover{
+    background-color: var(--color-acento);
+    padding: 6px 15px 6px 15px;
+}
 
+/* 5. Area Experiencia (Video) */
+#area-experiencia{
+    padding: 100px 0;
+    background: url(assets/11081.jpg) center center no-repeat rgba(0,0,0,0);
+    background-size: cover;
+}
+
+#area-experiencia video{
+    margin: 30px 5%;
+}
 
 
 
 
 /* Responsive */
 @media only screen and (max-width: 600px) {
+    
+    
+    /* 0. Generales / colores */
+    .elements-row{
+        flex-direction: column;
+        align-items: center;
+    }
     /* 2. Header / Cabecera */
     #cabecera-principal{
         flex-direction: column;
@@ -121,7 +177,7 @@
         /* alineo al centro */
         text-align: center;
         /* borde inferior */
-        border-bottom: 1px solid var(--color-principal);
+        border-bottom: 1px dotted rgb(228, 228, 228);
         /* quito borde */
         border-radius: 0;
     }
